@@ -1,0 +1,9 @@
+controllers:
+    resource:
+        path: ../src/
+        namespace: App
+    type: attribute
+
+api_login:
+    path: /auth/login
+    methods: POST

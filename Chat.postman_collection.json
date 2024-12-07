@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "b67fbb25-8a4a-419b-93eb-ca36ae6653a7",
+		"name": "Chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15886319"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"login\": \"tester21\",\n    \"password\": \"tester\",\n    \"first_name\": \"Tanya\",\n    \"last_name\": \"Tanya\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/user/1efb31c2-0ed8-6f74-a779-bd65fea0cb86",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1efb31c2-0ed8-6f74-a779-bd65fea0cb86"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"tester\",\n    \"first_name\": \"Tanya edited\",\n    \"last_name\": \"Tanya edited\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/user/1efb31c2-0ed8-6f74-a779-bd65fea0cb86",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1efb31c2-0ed8-6f74-a779-bd65fea0cb86"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/user/1efb3108-daab-6256-8ab1-fb12676b0aec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1efb3108-daab-6256-8ab1-fb12676b0aec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/user?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List chats by User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/user/1efb28e6-512e-6a52-9488-639fbab50531/chats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1efb28e6-512e-6a52-9488-639fbab50531",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"test caht room2\",\n    \"description\": \"this room2 for testing\",\n    \"public\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/chat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/chat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/chat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"test caht room D\",\n    \"description\": \"this room for testing\",\n    \"public\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/chat/1efb405b-7277-67fe-bf50-cbcf82bec4c6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat",
+								"1efb405b-7277-67fe-bf50-cbcf82bec4c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/chat/1efb405b-7277-67fe-bf50-cbcf82bec4c6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat",
+								"1efb405b-7277-67fe-bf50-cbcf82bec4c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Join",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/chat/1efb42ac-92c1-63cc-91ea-b10152e0570e/join",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat",
+								"1efb42ac-92c1-63cc-91ea-b10152e0570e",
+								"join"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Leave",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/chat/1efb4130-926b-6a12-b593-c5d5b2bf9009/leave",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat",
+								"1efb4130-926b-6a12-b593-c5d5b2bf9009",
+								"leave"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List users by chat ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/chat/1efb4130-926b-6a12-b593-c5d5b2bf9009/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat",
+								"1efb4130-926b-6a12-b593-c5d5b2bf9009",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "CSV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/report/chats/csv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"chats",
+								"csv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/v1/report/chats/json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"chats",
+								"json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"root\",\n    \"password\": \"root_password\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzM1OTU0NjYsImV4cCI6MTczMzU5OTA2Niwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJ1c2VybmFtZSI6InRlc3RlcjIxIn0.eQUJt8S85ygjKEhO-D-sLSfoPbC-Mj262C7DrAnAIDfCnReGOkF2u1NOBtW-c1_OaQx7tf8G-T3G66tUasG9aUCKdDYQI3etVGq_77BD5yZkLcHUBbQX329yFGwWlla26NZO7bseJK-upuBOmg8fOIFwCDk9LAsoE-JTBrbZZC1yYx7_YbxOCccjCUBEmdG_hF7LBOqYh4QsOXfU7XiwtK1ev5NF2BItl7lRbRaY25xR0YlFnatQlmf16kHKEuJE5Lg6_TU-_17zm8kNhzVG1oVFlnH-gAKkwBiWkcBrkTz9t6YlyPcNx0Kdmi8GQyoElQQ4o3uBCao4VgcOGu6d2dLt7u3MlGdgFVPUyhWewWLgaqq4Zle5oR78aL4y02odG1vbqfnP7_5PKGKeEgKsYHA3WjdjLN77HsT51Gw6Ko-YSFGxzfsbg9e_LQXLV-FbT40lDZg3OKiZw015NxZWyUvKDvD2fpyHBxICMVbO6ac-IU7m5lvf2E3oz_VVQxUOiCJjEDgpM013Fw72i7j4ClP9NEVgAFgIgyEZy-ofyQ7hF1gCzWKsz-N5Oy2j3xM-fis6aayDA1X9V1Hy1yVbcPML9Ab8Q5395_7L47jLnNDPAFCO9kzASb1KZATOi3Oc-5ql2XUCVHO4kXUxPlZ7MJ0QMCDtZCsDmdusYZPoYXo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
