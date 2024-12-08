@@ -30,7 +30,6 @@ readonly class UserCreateCommandHandler
             ->pipe($this->userValidationService)
             ->pipe($this->userCheckExistsService)
             ->pipe($this->userCreateService)
-            ->pipe(UserUpdateBalance)
             ->process($userDataService);
 
         return $userDataService;
