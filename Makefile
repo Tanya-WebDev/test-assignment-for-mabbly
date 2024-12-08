@@ -23,11 +23,15 @@ app-run:
 	docker compose up -d
 
 app-stop:
-	docker compose down
+	docker compose downa
+
+generate-keypair:
+	docker compose exec php bin/console lexik:jwt:generate-keypair --overwrite --no-interaction
 
 app-deploy:
 	docker compose up -d
 	docker compose exec php composer install
+	docker compose exec php bin/console lexik:jwt:generate-keypair --overwrite --no-interaction
 	docker compose exec php bin/console doctrine:database:create
 	docker compose exec php bin/console doctrine:migrations:migrate --no-interaction
 	docker compose exec php bin/console app:generate-data
